@@ -133,4 +133,4 @@ return jsonify(scores[:5])
 if **name** == "**main**":
 app.run(debug=True) #final debub
 
-print("everything is working fine")
+
