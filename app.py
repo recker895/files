@@ -6,7 +6,7 @@ app = Flask(**name**)
 chunks = []
 vectors = []
 
-# --- Simple embedding (term frequency) ---
+
 
 def embed(text):
 words = re.findall(r'\w+', text.lower())
