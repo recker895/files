@@ -7,7 +7,7 @@
 
 
 
-def embed(text):
+d
 words = re.findall(r'\w+', text.lower())
 freq = {}
 for w in words:
