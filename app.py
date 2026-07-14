@@ -7,12 +7,7 @@
 
 
 
-d
-words = re.findall(r'\w+', text.lower())
-freq = {}
-for w in words:
-freq[w] = freq.get(w, 0) + 1
-return freq
+
 
 # --- Cosine similarity ---
 
