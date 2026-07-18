@@ -12,10 +12,6 @@
 # --- Cosine similarity ---
 
 
-dot = sum(a.get(w, 0) * b.get(w, 0) for w in all_words)
-mag_a = math.sqrt(sum(v*v for v in a.values()))
-mag_b = math.sqrt(sum(v*v for v in b.values()))
-return dot / (mag_a * mag_b + 1e-9)
 
 # --- HTML UI ---
 
