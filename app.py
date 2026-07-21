@@ -18,17 +18,6 @@
 HTML = """
 
 
-<html>
-<head>
-    <title>Semantic Search</title>
-    <style>
-        body { font-family: Arial; background: #111; color: white; padding: 20px; }
-        textarea, input { width: 100%; padding: 10px; margin-top: 10px; background: #222; color: white; }
-        button { padding: 10px; margin-top: 10px; }
-        .result { background: #222; padding: 10px; margin-top: 10px; }
-    </style>
-</head>
-<body>
 
 <h2>Semantic Search Engine (Python)</h2>
 
