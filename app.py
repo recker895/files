@@ -15,23 +15,7 @@
 
 # --- HTML UI ---
 
-HTML = """
 
-
-
-<h2>Semantic Search Engine (Python)</h2>
-
-<textarea id="text" rows="6" placeholder="Paste text here"></textarea>
-
-<button onclick="process()">Process</button>
-
-<input id="query" placeholder="Search query">
-<button onclick="search()">Search</button>
-
-<div id="results"></div>
-
-<script>
-async function process() {
     const text = document.getElementById("text").value;
 
     await fetch("/process", {
