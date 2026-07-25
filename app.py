@@ -9,20 +9,6 @@
 
 
 
-# --- Cosine similarity ---
-
-
-
-# --- HTML UI ---
-
-
-    const text = document.getElementById("text").value;
-
-    await fetch("/process", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({text})
-    });
 
     alert("Text processed");
 }
