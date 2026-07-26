@@ -10,8 +10,7 @@
 
 
 
-    alert("Text processed");
-}
+   
 
 async function search() {
     const query = document.getElementById("query").value;
