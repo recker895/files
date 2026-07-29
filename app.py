@@ -14,13 +14,8 @@
 
 
 
-    const data = await res.json();
 
-    const div = document.getElementById("results");
-    div.innerHTML = "";
-
-    data.forEach(r => {
-        div.innerHTML += `
+    data.forEach(r => 
             <div class="result">
                 <div>Score: ${r.score.toFixed(3)}</div>
                 <div>${r.text}</div>
