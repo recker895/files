@@ -16,7 +16,7 @@
 
 
 
-                <div>Score: ${r.score.toFixed(3)}</div>
+               
                 <div>${r.text}</div>
             </div>
         `;
