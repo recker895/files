@@ -16,13 +16,6 @@
 
 
 
-}
-</script>
-
-</body>
-</html>
-"""
-
 # --- Routes ---
 
 @app.route("/")
