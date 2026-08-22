@@ -31,8 +31,6 @@ text = request.json["text"]
 chunks = re.findall(r'.{1,200}', text)
 vectors = [embed(c) for c in chunks]
 
-return jsonify({"status": "ok"})
-```
 
 @app.route("/search", methods=["POST"])
 def search():
