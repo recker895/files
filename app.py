@@ -22,7 +22,7 @@
 
 
 
-@app.route("/process", methods=["POST"])
+
 def process_text():
 global chunks, vectors
 text = request.json["text"]
