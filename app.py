@@ -23,7 +23,7 @@
 
 
 
-global chunks, vectors
+
 text = request.json["text"]
 
 ```
