@@ -24,7 +24,7 @@
 
 
 
-text = request.json["text"]
+text = request.json
 
 ```
 chunks = re.findall(r'.{1,200}', text)
