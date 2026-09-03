@@ -26,8 +26,6 @@
 
 
 
-```
-chunks = re.findall(r'.{1,200}', text)
 vectors = [embed(c) for c in chunks]
 
 
