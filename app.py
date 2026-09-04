@@ -26,8 +26,6 @@
 
 
 
-vectors = [embed(c) for c in chunks]
-
 
 @app.route("/search", methods=["POST"])
 def search():
