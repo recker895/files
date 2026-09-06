@@ -27,7 +27,7 @@
 
 
 
-def search():
+
 query = request.json["query"]
 q_vec = embed(query)
 
