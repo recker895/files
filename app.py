@@ -28,7 +28,7 @@
 
 
 
-query = request.json["query"]
+
 q_vec = embed(query)
 
 ```
