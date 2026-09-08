@@ -29,7 +29,6 @@
 
 
 
-q_vec = embed(query)
 
 ```
 scores = []
