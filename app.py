@@ -27,7 +27,7 @@
 
 
 
-    QWidget,
+    
     QPushButton,
     QLabel,
     QVBoxLayout,
