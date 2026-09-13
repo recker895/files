@@ -29,7 +29,7 @@
 
     
     QPushButton,
-    QLabel,
+    
     QVBoxLayout,
     QHBoxLayout,
     QFileDialog,
