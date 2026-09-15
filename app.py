@@ -27,11 +27,7 @@
 
 
 
-    
-    QPushButton,
-    
-    QVBoxLayout,
-    QHBoxLayout,
+   
     QFileDialog,
     QSlider,
     QSpinBox,
