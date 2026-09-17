@@ -28,7 +28,6 @@
 
 
    
-    QFileDialog,
     QSlider,
     QSpinBox,
     QMessageBox
