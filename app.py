@@ -29,8 +29,7 @@
 
    
     QSlider,
-    QSpinBox,
-    QMessageBox
+    QS
 )
 from PyQt6.QtCore import Qt, QUrl
 from PyQt6.QtGui import QPixmap
