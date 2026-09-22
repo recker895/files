@@ -30,8 +30,7 @@
    
    
 
-)
-from PyQt6.QtCore import Qt, QUrl
+
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtMultimedia import QMediaPlayer, QAudioOutput
 from PyQt6.QtMultimediaWidgets import QVideoWidget
