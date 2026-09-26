@@ -32,7 +32,7 @@
 
 
 
-from PyQt6.QtMultimedia import QMediaPlayer, QAudioOutput
+
 from PyQt6.QtMultimediaWidgets import QVideoWidget
 
 # Standard MoviePy 1.0.3 imports
