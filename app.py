@@ -38,7 +38,7 @@
 # Standard MoviePy 1.0.3 imports
 
   
-    AudioFileClip,
+    
     ImageClip
 )
 
