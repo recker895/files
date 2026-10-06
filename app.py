@@ -38,14 +38,7 @@
 # Standard MoviePy 1.0.3 imports
 
   
-    
-    ImageClip
-)
-
-
-class SimpleVideoAudioEditor(QWidget):
-    def __init__(self):
-        super().__init__()
+   
         self.setWindowTitle("Simple Video & Image Audio Overlay Editor")
         self.resize(900, 650)
 
