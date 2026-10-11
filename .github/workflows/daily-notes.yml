@@ -2,8 +2,9 @@ name: Daily notes
 
 on:
   schedule:
-    # 14:30 UTC is 8:00 PM in India (Asia/Kolkata).
-    - cron: '30 14 * * *'
+    # India time: 11 AM primary; 3 PM, 7 PM, and 10 PM backups.
+    # Runs after a successful entry skip without making another commit.
+    - cron: '30 5,9,13,16 * * *'
   workflow_dispatch:
 
 permissions:
