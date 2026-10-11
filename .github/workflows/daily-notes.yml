@@ -1,0 +1,57 @@
+name: Daily notes
+
+on:
+  schedule:
+    # 14:30 UTC is 8:00 PM in India (Asia/Kolkata).
+    - cron: '30 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-notes
+  cancel-in-progress: false
+
+jobs:
+  update-notes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TZ: Asia/Kolkata
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      GIT_AUTHOR_NAME: recker895
+      GIT_AUTHOR_EMAIL: 66128735+recker895@users.noreply.github.com
+      GIT_COMMITTER_NAME: github-actions[bot]
+      GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Write five random lines
+        run: python3 .github/scripts/daily_notes.py
+
+      - name: Commit and push today's entry
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- daily-notes.txt
+          if git diff --cached --quiet; then
+            echo "Today's entry already exists; no commit needed."
+            exit 0
+          fi
+          git commit -m "chore: automated daily notes $(date +%F)"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:$DEFAULT_BRANCH"; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              sleep 3
+              git pull --rebase origin "$DEFAULT_BRANCH"
+            fi
+          done
+          echo "Unable to push the daily entry after three attempts." >&2
+          exit 1
